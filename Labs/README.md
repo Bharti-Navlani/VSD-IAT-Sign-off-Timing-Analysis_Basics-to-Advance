@@ -2,7 +2,7 @@
 
 * [Day 1](#day-1)
     + [Lab 1](#Lab-1)
-        - [About OpenSTA](#About OpenSTA)
+        - [About OpenSTA](#About-OpenSTA)
         - [Constraints Creation](#Constraints-Creation)
         - [Run OpenSTA](#Run-OpenSTA)
         
@@ -19,10 +19,10 @@
  
 > Day1 
  
->> [Lab 1](#Lab-1)
->>> [About OpenSTA](#About OpenSTA)
+>> Lab_1 : **About OpenSTA**
+
         
-OpenSTAis a gate level static timing verifier. As a stand-alone executable it can be used to verify the timing of a design using standard file formats like :- 
+OpenSTA is a gate level static timing verifier. As a stand-alone executable it can be used to verify the timing of a design using standard file formats like :- 
 
 -Verilog netlist    
 -Liberty library    
@@ -37,7 +37,12 @@ By using a network adapter, OpenSTAcan access the host netlist data structures w
 Query based incremental update of delays, arrival and required times & Simulator to propagate constants from constraints and netlist tie high/low
 
 Reference for commands used in OpenSTA :
+
 https://github.com/Bharti-Navlani/VSD-IAT-Sign-off-Timing-Analysis_Basics-to-Advance/files/10786440/OpenSTA.pdf
+
+>> Lab_1 : **Inputs to OpenSTA**
+
+
 
 
 
