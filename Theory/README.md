@@ -6,21 +6,16 @@
     + [SDC File](#SDC-File)
     + [Clock](#Clock)
     + [Port Delays and Boundary Constrains](#Port-Delays-and-Boundary-Constrains)
-    + [Lab 1](#Lab-1)
-        - [OpenSTA](#OpenSTA)
-        - [Constraints Creation](#Constraints-Creation)
-        - [Run OpenSTA](#Run-OpenSTA)
+   
 * [Day 2](#day-2)
     + [Other Timing Checks](#Other-Timing-Checks)
     + [Design Rule Checks](#Design-Rule-Checks)
     + [Latch Timing](#Latch-Timing)
     + [STA Text Report](#STA-Text-Report)
-    + [Lab 2](#Lab-2)
-        - [Liberty Files](#Liberty-Files)
-        - [Exercise 1](#Exercise-1)
-        - [SPEF Files](#SPEF-Files)
-        - [Exercise 2](#Exercise-2)
+   
 * [Day 3](#day-3)
+
+
 * [Appendix](#Appendix)
 * [References](#references)
 * [Acknowledgement](#acknowledgement)
