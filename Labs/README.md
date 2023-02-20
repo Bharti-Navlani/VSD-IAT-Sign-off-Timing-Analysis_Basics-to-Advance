@@ -17,7 +17,12 @@
  * [Day 3](#day-3)
     + [Lab 3](#Lab-3)
         - [Understanding Slack Compulation](#Understanding-Slack-Compulation)
-  
+        
+  * [Day 4](#day-3)
+    + [Lab 4](#Lab-4)
+        - [Clock Gating Check](#Clock-Gating-Check)
+        - [Async Pin Check](#Async-Pin-Check)       
+       
     
  
  **Content**
@@ -140,7 +145,7 @@ Following the command to read spef file :-
 
 #   Day3
 
-## Understanding Slack Compulation
+## Lab_3 : Understanding Slack Compulation
 
 Following the circuit provided to perform the slack compulation calculation 
 
@@ -174,4 +179,16 @@ This will report slack compulation w.r.t 8 path as shown in below image which lo
 ![D3_Lab_3p9](https://user-images.githubusercontent.com/84861735/220180619-dc6f578f-68c6-400f-988e-6591677d39e5.png)
 
 
+# Day4
+
+## Lab_4 : Clock Gating Check 
+
+![D4_Lab_1p1](https://user-images.githubusercontent.com/84861735/220181744-9c0d1fb0-412d-4810-ae36-46efe07766b0.png)
+![D4_Lab_1p2](https://user-images.githubusercontent.com/84861735/220181760-9c86aab7-5269-4b45-b3f1-acd63881bcd5.png)
+![D4_Lab_1p3](https://user-images.githubusercontent.com/84861735/220181780-714596ea-f2c6-434b-82cd-595135db7998.png)
+
+## Lab 4 : Async Pin Check 
+
+![D4_Lab_2p1](https://user-images.githubusercontent.com/84861735/220181803-ae9a6728-1251-4721-b956-bf81fe910100.png)
+![D4_Lab_2p2](https://user-images.githubusercontent.com/84861735/220181808-6d30deef-6d5d-42a9-b8d6-14ab597dcea9.png)
 
