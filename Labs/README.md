@@ -3,7 +3,7 @@
 * [Day 1](#day-1)
     + [Lab 1](#Lab-1)
         - [About OpenSTA](#About-OpenSTA)
-        - [Constraints Creation](#Constraints-Creation)
+        - [Inputs to OpenSTA](#Inputs-to-OpenSTA)
         - [Run OpenSTA](#Run-OpenSTA)
         
 * [Day 2](#day-2)
@@ -42,7 +42,19 @@ https://github.com/Bharti-Navlani/VSD-IAT-Sign-off-Timing-Analysis_Basics-to-Adv
 
 >> Lab_1 : **Inputs to OpenSTA**
 
-Verilog Model : 
+Verilog Model : Contains the Standard Cells
+
+![D1_Lab_1p1](https://user-images.githubusercontent.com/84861735/220170992-4b3945b4-8bab-4da4-b3f4-498e1efebaa2.png)
+
+Liberty File : Standards Cells Information is present in liberty or .lib file 
+
+![D1_Lab_1p2](https://user-images.githubusercontent.com/84861735/220170995-c88730e3-b929-4688-9ade-47fb2c126db3.png)
+
+Synopsys Constrain File : SDC which contains design constraints  & timing constraints 
+
+![D1_Lab_1p4](https://user-images.githubusercontent.com/84861735/220171001-c15f3c62-5006-4ce4-b319-7b9cf263e785.png)
+
+>> Lab_1 : **run OpenSTA**
 
 
 
