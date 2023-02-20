@@ -42,6 +42,7 @@ https://github.com/Bharti-Navlani/VSD-IAT-Sign-off-Timing-Analysis_Basics-to-Adv
 
 >> Lab_1 : **Inputs to OpenSTA**
 
+Verilog Model : 
 
 
 
