@@ -69,10 +69,18 @@ Following the command use to run OpenSTA
     sta run.tcl -exit | tee run1.log
 
 After the execution of above command , all inputs are being read as show in below image :- 
+
 ![D1_Lab_1p6](https://user-images.githubusercontent.com/84861735/220173322-d5dc8920-cd6b-461b-b6f1-f70863633676.png)
 
 Reports the Timing results in below image 
-![D1_Lab_1p7](https://user-images.githubusercontent.com/84861735/220173344-8401d4aa-0ae8-4205-9fb4-09a2a4bfea3f.png)
-![D1_Lab_1p8](https://user-images.githubusercontent.com/84861735/220173378-f48f998b-11b2-47f1-9be1-035dcd032be0.png)
+
+https://user-images.githubusercontent.com/84861735/220175405-d140d313-b5be-4de7-9b7a-7ecf8fed7655.png
+
+> Day2
+ 
+>> Lab_2 : **Liberty Files**
+
+
+
 
 
