@@ -50,12 +50,18 @@ Liberty File : Standards Cells Information is present in liberty or .lib file
 
 ![D1_Lab_1p2](https://user-images.githubusercontent.com/84861735/220170995-c88730e3-b929-4688-9ade-47fb2c126db3.png)
 
+Below image shows the inputs , output & funtion of sky130_fd_sc_hd___nand2_1
+
+![D1_Lab_1p3](https://user-images.githubusercontent.com/84861735/220172357-5f00372c-de07-48cb-badc-dc56da1e4b9d.png)
+
 Synopsys Constrain File : SDC which contains design constraints  & timing constraints 
 
 ![D1_Lab_1p4](https://user-images.githubusercontent.com/84861735/220171001-c15f3c62-5006-4ce4-b319-7b9cf263e785.png)
 
 >> Lab_1 : **run OpenSTA**
 
+Following files shows the steps to read all the above inputs & perform the timing check
 
+![D1_Lab_1p5](https://user-images.githubusercontent.com/84861735/220172393-9ea9a303-ef76-4f21-b539-d5b3964ea0e0.png)
 
 
