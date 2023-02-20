@@ -11,9 +11,14 @@
         - [Liberty Files](#Liberty-Files)
         - [Exercise 1](#Exercise-1)
         - [SPEF Files](#SPEF-Files)
+        - [Understanding Timing Report](#Understanding-Timing-Report)
         - [Exercise 2](#Exercise-2)
         
- 
+ * [Day 3](#day-3)
+    + [Lab 3](#Lab-3)
+        - [Understanding Slack Compulation](#Understanding-Slack-Compulation)
+  
+    
  
  **Content**
 
@@ -132,5 +137,9 @@ Following the command to read spef file :-
 ## Lab_2 : **Exercise 2**
 
 ![D2_Lab_1p5](https://user-images.githubusercontent.com/84861735/220177028-1b30ea3e-0f39-4859-9200-74dec13f919d.png)
+
+#   Day3
+
+## Understanding Slack Compulation
 
 
