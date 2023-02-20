@@ -16,10 +16,10 @@
  
  
  **Content**
- 
-> Day1 
- 
->> Lab_1 : **About OpenSTA**
+
+# Day1 
+
+## Lab_1 : **About OpenSTA**
 
         
 OpenSTA is a gate level static timing verifier. As a stand-alone executable it can be used to verify the timing of a design using standard file formats like :- 
@@ -40,7 +40,7 @@ Reference for commands used in OpenSTA :
 
 https://github.com/Bharti-Navlani/VSD-IAT-Sign-off-Timing-Analysis_Basics-to-Advance/files/10786440/OpenSTA.pdf
 
->> Lab_1 : **Inputs to OpenSTA**
+## Lab_1 : **Inputs to OpenSTA**
 
 Verilog Model : Contains the Standard Cells
 
@@ -58,7 +58,7 @@ Synopsys Constrain File : SDC which contains design constraints  & timing constr
 
 ![D1_Lab_1p4](https://user-images.githubusercontent.com/84861735/220171001-c15f3c62-5006-4ce4-b319-7b9cf263e785.png)
 
->> Lab_1 : **run OpenSTA**
+## Lab_1 : **run OpenSTA**
 
 Following files shows the steps to read all the above inputs & perform the timing check
 
@@ -76,9 +76,9 @@ Reports the Timing results in below image
 
 https://user-images.githubusercontent.com/84861735/220175405-d140d313-b5be-4de7-9b7a-7ecf8fed7655.png
 
-> Day2
+# Day2
  
->> Lab_2 : **Liberty Files**
+## Lab_2 : **Liberty Files**
 
 The .lib file is an ASCII representation of the timing & power parameters associated with any cell in a particular semiconductor technology
 
@@ -97,7 +97,7 @@ Liberty file will following information
 ![Liberty3](https://user-images.githubusercontent.com/84861735/220176793-29876f0a-8f32-4997-868b-5dd24f110461.png)
 
 
->> Lab_2 : **Exercise 1**
+## Lab_2 : **Exercise 1**
 
 "Find all cells in simple_max.lib"
 Total 211 cells are present 
@@ -113,7 +113,7 @@ Difference between NAND2_x1 & NAND3_X1 is highlighted in below image :-
 ![D2_Lab_1p4](https://user-images.githubusercontent.com/84861735/220176941-70829dc8-f736-4234-84e8-a5a9a6cf35b5.png)
 
  
->> Lab_2 : **Spef Files**
+## Lab_2 : **Spef Files**
 
 Standard Parasitic Exchange Format(SPEF) file describe parasitic information w.r.t design 
 
@@ -125,11 +125,11 @@ Following the command to read spef file :-
 
 ![Spef](https://user-images.githubusercontent.com/84861735/220176974-f28cd009-8b31-46bb-98b7-7bd199fd7074.png)
 
->> Lab_2 : **Understanding Timing Report**
+## Lab_2 : **Understanding Timing Report**
 
 ![Timing_Report](https://user-images.githubusercontent.com/84861735/220176999-2d188d90-792e-4e17-9a2e-5c76ba07f1ed.png)
 
->> Lab_2 : **Exercise 2**
+## Lab_2 : **Exercise 2**
 
 ![D2_Lab_1p5](https://user-images.githubusercontent.com/84861735/220177028-1b30ea3e-0f39-4859-9200-74dec13f919d.png)
 
