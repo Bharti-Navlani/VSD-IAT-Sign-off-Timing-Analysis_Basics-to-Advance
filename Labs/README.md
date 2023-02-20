@@ -142,4 +142,36 @@ Following the command to read spef file :-
 
 ## Understanding Slack Compulation
 
+Following the circuit provided to perform the slack compulation calculation 
+
+![D3_Lab_3p1](https://user-images.githubusercontent.com/84861735/220180512-308e1561-43ee-4084-aebf-6fd93affd810.png)
+
+Following snap shows the command & inputs used for slack computation :- 
+    report_checks -from F1/CK  
+
+![D3_Lab_3p2](https://user-images.githubusercontent.com/84861735/220180534-609c6693-900a-4329-af8c-b60aea8c1b4e.png)
+
+This will report slack compulation w.r.t that path as shown in below image :- 
+
+![D3_Lab_3p3](https://user-images.githubusercontent.com/84861735/220180544-e7401f08-a757-4b21-8f11-90b8b175b5bb.png)
+
+   report_checks -from F1/CK  -endpoint_count 2 
+
+![D3_Lab_3p4](https://user-images.githubusercontent.com/84861735/220180561-111a9fee-81fc-44bd-bb00-726ee60f5455.png)
+
+This will report slack compulation w.r.t 2 path as shown in below image :- 
+
+![D3_Lab_3p5](https://user-images.githubusercontent.com/84861735/220180568-4e92bb81-3fe6-4b84-9332-242e9e8bc3e9.png)
+
+   report_checks -from F1/CK  -endpoint_count 100
+
+![D3_Lab_3p6](https://user-images.githubusercontent.com/84861735/220180574-9b6f6be7-1cdd-42f7-9205-81271e9eac32.png)
+
+This will report slack compulation w.r.t 8 path as shown in below image which looks maximum possible path in the design :- 
+
+![D3_Lab_3p7](https://user-images.githubusercontent.com/84861735/220180583-1529389f-38bb-49e5-8f6a-0f82cd3f1aaa.png)
+![D3_Lab_3p8](https://user-images.githubusercontent.com/84861735/220180595-f897d74e-f888-48ee-983c-54f9398c4cd6.png)
+![D3_Lab_3p9](https://user-images.githubusercontent.com/84861735/220180619-dc6f578f-68c6-400f-988e-6591677d39e5.png)
+
+
 
