@@ -184,11 +184,21 @@ Design Rule Checks specifies about
 - If this shrinked clock is below the certain value then pulse width violation happens.
 ![D2_Fig_3_PWC](https://user-images.githubusercontent.com/84861735/220701490-9c522a48-1c27-4cb1-bc84-e2eb6cb68bde.png)
 
+### Latch Timing
 
-![D2_Fig_4p1](https://user-images.githubusercontent.com/84861735/220701495-18cff4a7-6375-464a-90ef-f4ecf9c3ed2f.png)
-![D2_Fig_4p2](https://user-images.githubusercontent.com/84861735/220701499-567a538b-e5f3-4c91-bede-3b9721a6f0ce.png)
+Flop based design launch & capture data on clock edges whereas latch can start sampling data from the rising edge(or falling edge) itself and continue sampling till the respective falling edge (or rising edge) because latches are level sensitive . Hence latch based design are good for timing because has drawback when it comes to DFT 
+
+![D2_Latch_ff](https://user-images.githubusercontent.com/84861735/220705673-e1adcec2-9712-467f-9d43-7117b1958563.png)
+
+#### Time Borrowing
+Time borrowing is the property of a latch by virtue of which a path ending at a latch can borrow time from the next path in pipeline such that the overall time of the two paths remains the same. The time borrowed by the latch from next stage in pipeline is, then, subtracted from the next path's time.
 ![D2_Fig_4p3](https://user-images.githubusercontent.com/84861735/220701502-b38ad761-b104-4de5-8986-40da9c5e0030.png)
+
+### STA Text Report
+STA tool when does the analysis , its first converts that logic into nodes and cells and archs as shown below :- 
 ![D2_Fig_5p1](https://user-images.githubusercontent.com/84861735/220701507-6a199f28-9f8f-46dd-b0f0-8549f22b6799.png)
+
+#### Sample STA Text Report
 ![D2_Fig_5p2](https://user-images.githubusercontent.com/84861735/220701508-b99282c7-27be-4364-8997-872cf6e2cf84.png)
 
 
