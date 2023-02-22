@@ -228,12 +228,120 @@ STA tool when does the analysis , its first converts that logic into nodes and c
 
 # Day 3 
 
+### Multiple Clocks
+When different types of clock are present(of different frequency) then setup check is calculated or the most restrictive setup is identified by 
+-First expanding a clock by a common base period 
+-Most closest launch and capture which is used find the most restrictive setup. 
+-The hold check is dependent upon the modified setup check
+
+Setup Check : 
+
+![D3_1](https://user-images.githubusercontent.com/84861735/220715620-4e790cc4-49b3-4547-b8e6-00c8e9317501.png)
+
+Hold Check : 
+
+![D3_2](https://user-images.githubusercontent.com/84861735/220715695-dd13cc16-9701-4015-9204-4d2fccb5d4ee.png)
+
+There are two rules of hold check
+1) Data launched by setup launch edge must not be captured by previous capture edge 
+2) Data launched next launched edge must not be captured by setup captured edge 
+
+![D3_3](https://user-images.githubusercontent.com/84861735/220715704-1e395c92-07fa-46ed-b55f-cca85fc2a24b.png)
+
+
+### Types of Timing Arch
+
+Following are the different types of archs :- 
+
+1) Cell Arch - It is the input to output connection in the cell present in logical libraries . These arch will have information about the input-output functionality, rise and fall time, delays, etc.
+
+2) Net Arch - It connects one cell to other cell and there are ways to calculate the information about the cell to cell rise and fall time, delays, etc.
+
+![D3_5](https://user-images.githubusercontent.com/84861735/220715760-ffb416f4-046c-4718-b9e0-6bd7abf53669.png)
+
+3) Combinational Arch - it does not contain any state elements 
+
+![D3_6](https://user-images.githubusercontent.com/84861735/220715916-3bdb12e2-3f60-4c36-826e-112f837a74a8.png)
+
+4) Sequetial Arch - These are related to clocks like our setup and hold timing. There are setup and hold arch which tells us about the setup and hold time requirement of the library. It has delay arch defined in the logical library.
+
+![D3_7](https://user-images.githubusercontent.com/84861735/220715943-9eb7e659-15f9-49a7-98f6-f8d0fe56bdbe.png)
+
+
+5) Positive Unate Arch - Positive Unate Arch follows the input in same direction. It basically tells us that when input rises the output also rises or when input falls the output also going to fall
+6) Negative Unate Arch - Negative Unate Arch follows the input in opposite direction. It basically tells us that when input rises the output falls or when input rises the output also going to fall.
+7) Non Unate Arch - In Non Unate Arch output cant be predicted the output when input changes.
+
+![D3_4](https://user-images.githubusercontent.com/84861735/220715739-6d6e39eb-1d1b-479d-bb67-8976d41bdf3f.png)
+
+
+### Cell Delays & Arch 
+Cell Arch have these Cell Delays
+
+![D3_8](https://user-images.githubusercontent.com/84861735/220715960-84a44c35-841f-403c-8df8-543e0f3e1c9e.png)
+
+### Clock Skew
+- Clock Skew is the time difference between arrival of the same edge of a clock signal at the Clock pin of the capture flop and launch flop.
+- It is basically the delay difference between the two clocks.
+
+![D9](https://user-images.githubusercontent.com/84861735/220716010-75c603a7-a620-41a1-a6d8-00decdc8f0dd.png)
+
+### Clock Latency
+The time taken by Clock signal to reach from clock source to the clock pin of a particular flip flop is called as Clock latency.
+
+![D3_Fig_3p4](https://user-images.githubusercontent.com/84861735/220716053-0e3fb8bf-0784-4f7c-9d3c-f87b5fbdc7f7.png)
+
+### Clock Jitter
+Clock jitter is a characteristic of the clock source and the clock signal environment. It can be defined as “deviation of a clock edge from its ideal location.” Clock jitter is typically caused by clock generator circuitry, noise, power supply variations, interference from nearby circuitry etc.
+
+![D3_Fig_3p5](https://user-images.githubusercontent.com/84861735/220716079-610baa29-e3a9-4385-ae3f-e305a5911d27.png)
+
+
+### Setup Check with Clock Skew & Clock Jitter 
+
+    Tcq + Tcombo + Tsetup <= Tperiod + Tskew - Su 
+
+![D3_Fig_4p1](https://user-images.githubusercontent.com/84861735/220716100-b8c8bc58-c4e6-48bf-98ac-295c159f95bc.png)
+
+### Hold Check with Clock Skew & Clock Jitter 
+
+    Tc2q + Tcombo >= Thold + Tskew + Hu
+
+![D3_Fig_4p2](https://user-images.githubusercontent.com/84861735/220716126-01253ad1-e055-4ce9-bb72-1ee8455d8ab9.png)
+
+### Different Delay Values on Path - Setup Check
+
+-A path can have different delay 
+-STA to stay pessimistic SETUP , uses max delay path
+-Launch data as late as possible, CLKL -> late 
+-Captures data as early as possible, CLKC -> early 
+
+![D3_Fig_4p3](https://user-images.githubusercontent.com/84861735/220716186-ab090523-79d8-4471-884c-45afd97750d0.png)
+
+### Different Delay Values on Path - Hold Check 
+
+-A path can have different delay 
+-STA to stay pessimistic HOLD , uses min delay path
+-Launch data as early as possible, CLKL -> early 
+-Captures data as late as possible, CLKC -> late
+
+![D3_Fig_4p4](https://user-images.githubusercontent.com/84861735/220716210-e6f7cd0d-df03-4bd0-8ae2-406f5049fe38.png)
+
+### CRPR-Clock Reconvergence Pessimism Removal
+
+![D3_Fig_4p5](https://user-images.githubusercontent.com/84861735/220716237-71eb94f3-0c17-4136-97f5-bd133c0e1d07.png)
+
+- During decision of max and min launch path sometimes there is confussion in choosing the best path because some part of the circuit is common in two paths and that can be soled by CRPF
+- Clock reconvergence pessimism (CRP) is a delay difference between the launching and capturing clock pathways. The most prevalent causes of CRP are convergent pathways in the clock network and varying minimum and maximum delays of clock network cells.
 
 
 # Reference 
+
 https://vsdiat.com/
 
 # Acknowledgement
+
 Kunal Ghosh, Co-founder of VLSI System Design (VSD) Corp. Pvt. Ltd.
+
 Vikas Sachdeva, Advisor, Tech and VLSI Coach, Trainer and Innovator at vlsideepdive.
 
