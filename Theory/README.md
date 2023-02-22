@@ -3,7 +3,7 @@
     + [Timing Paths](#Timing-Paths)
     + [Setup & Hold Checks](#Setup-&-Hold-Checks)
     + [Slack Calculation](#Slack-Calculation)
-    + [SDC File](#SDC-File)
+    + [SDC Overview](#SDC-Overview)
     + [Clock](#Clock)
     + [Port Delays and Boundary Constrains](#Port-Delays-and-Boundary-Constrains)
    
@@ -28,17 +28,13 @@
 Static timing analysis (STA) is a method of validating the timing performance of a design by checking all possible paths for timing violations. 
 
 -   STA breaks a design down into timing paths 
-
 -   calculates the signal propagation delay along each path 
-
 -   checks for violations of timing constraints inside the design and at the input/output interface
 
 STA takes the following inputs to perform timing analysis :- 
 
 - Netlist (gate level representation of the design)
-
 - SDC or Constrains file (what you want to time)
-
 - Logic Libraries (information about cells delays mapping to silicon)
 
 ### STA Features
@@ -60,17 +56,61 @@ Following the timing path elements :-
 
 Following design shows the different path with their start & end point 
 
+![Fig_1p2_Timing_Path](https://user-images.githubusercontent.com/84861735/220678327-c1ccc5c3-81f3-43d4-a69e-b34933a6b23a.png)
 
+Following design shows the different path for combinational logic :- 
 
 ![Fig_2p3_Combo_Logic](https://user-images.githubusercontent.com/84861735/220183305-f51887b2-c3b5-4fe4-b2b3-438f996109b1.png)
+
+### Setup & Hold Checks
+
+- A **setup check** specifies how much time it is necessary for data to be available at the input of a sequential element before  clock edge of the element that captures the data in the device. This check enforces a **maximum delay** on the data path relative to the clock edge. 
+
 ![Fig_3p1_Setup_Check](https://user-images.githubusercontent.com/84861735/220183308-85bf7bf8-f7d4-46aa-a77b-3c61c81b9249.png)
+
+- A **hold check** specifies how much time is necessary for data to be stable at the input of a sequential device after the clock edge that captures the data in the device. This check enforces a **minimum delay** on the data path relative to the clock edge.
+
 ![Fig_3p2_Hold_Check](https://user-images.githubusercontent.com/84861735/220183311-acedfb7c-38b6-4264-b465-ae4b414e2117.png)
-![Fig_4p1_Data_Arrival_Time](https://user-images.githubusercontent.com/84861735/220183313-cb6536cc-db13-4158-b118-8a1b628cb66c.png)
+
+Setup & hold time will vary as per techonology node & for STA analysis it is available in logical libraries.
+
+### Slack Calculation 
+
+    Slack = Data Requiured Time - Data Arrival Time 
+    
+#### Data Arrival Time 
 ![Fig_4p2_Data_Arrival_Time2](https://user-images.githubusercontent.com/84861735/220183314-3743193c-50a8-459b-b316-12ebca02af29.png)
+
+#### Data Required Time
 ![Fig_4p3_Data_Required_Time](https://user-images.githubusercontent.com/84861735/220183318-9e235ed4-db5c-43c0-b3ee-f5ba98460057.png)
+
+Slack is function of clock frequency & setup time requirement of the end time flop
+
+When difference between data required time & data arrival time is positive then timing is MET !
 ![Fig_5p1_Slack](https://user-images.githubusercontent.com/84861735/220183319-99cab57e-32d2-447d-9953-bc274c1130fa.png)
+
+When difference between data required time & data arrival time is positive then timing is VIOLATED ! 
 ![Fig_5p2_Slack](https://user-images.githubusercontent.com/84861735/220183323-a37c0b7c-0615-4c4e-ae5c-b3ebb65e03b2.png)
+
+When difference between data required time & data arrival time is zero then timing is just MET ! 
+
+
+Consider a senario in which we have combo logic between two flops with delay of Ld
+In addition to above , we also need to be consider setup time of the launch flop so 
+
+    Arrival = Tckq + Ld
+    
+    Arrival < Tperiod - Tsetup(of capture flop) 
+
 ![Fig_5p3_Slack](https://user-images.githubusercontent.com/84861735/220183328-2bebc7c8-ec63-47f6-9e6a-554b75f4d71a.png)
+
+
+### SDC File
+
+- Timing constraints are defined in some specific format which is known as , Synopsys Design Constraint (SDC), is used to specify timing and other design constraints
+- SDC commands are the set of commands which are provided as an input to STA Tool to do timing analysis
+-  
+
 ![Fig_6p1_create_clock](https://user-images.githubusercontent.com/84861735/220183330-e24eb7e6-c00c-4308-9384-0b061b425c5f.png)
 ![Fig_6p2_create_clock](https://user-images.githubusercontent.com/84861735/220183333-711233cf-8c33-449a-847b-79880ba1d6a2.png)
 ![Fig_6p3_create_clock](https://user-images.githubusercontent.com/84861735/220183335-801351a6-edfa-49e5-916b-09461b60df1a.png)
