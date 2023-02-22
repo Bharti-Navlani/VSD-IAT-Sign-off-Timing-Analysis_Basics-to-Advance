@@ -148,6 +148,6 @@ Following commands are used to specify boundary constrains
     set_input_delay
     set_output delay
 
-
+![Fig_8_BC1](https://user-images.githubusercontent.com/84861735/220697820-ee512236-a187-4595-b8fb-be296a8d3a4b.png)
 ![Fig_8_BC2](https://user-images.githubusercontent.com/84861735/220183293-b6c8c811-ccea-426d-b07e-c99cda9bf33b.png)
 ![Fig_8_BC3](https://user-images.githubusercontent.com/84861735/220183296-7f561f9d-61b1-4618-9783-0e9ea6f8d5a1.png)
