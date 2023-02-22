@@ -14,7 +14,7 @@
     + [STA Text Report](#STA-Text-Report)
    
 * [Day 3](#day-3)
-    + Multiple Clocks(#Multiple-Clocks)
+    + Multiple Clocks(#multiple-clocks)
     + Types of Arch(#Types-of-Arch)
     + Cell Delays(#Cell-Delays)
     + Clock Skew(#Clock-Skew)
