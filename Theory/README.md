@@ -1,5 +1,5 @@
 * [Day 1](#day-1)
-    + [STA Defination](#STA-Defination)
+    + [STA Definition & Features](#STA-Definition-&-Features)
     + [Timing Paths](#Timing-Paths)
     + [Setup & Hold Checks](#Setup-&-Hold-Checks)
     + [Slack Calculation](#Slack-Calculation)
@@ -24,11 +24,44 @@
 
 # Day 1 
 
+### STA definition
+Static timing analysis (STA) is a method of validating the timing performance of a design by checking all possible paths for timing violations. 
 
-![Fig_1p1_Timing_Path](https://user-images.githubusercontent.com/84861735/220183144-0982f4b7-573d-482f-99f0-b1f66b044a6d.png)
-![Fig_1p2_Timing_Path](https://user-images.githubusercontent.com/84861735/220183298-a9b78a10-ddbc-4290-beaa-1d2668bce106.png)
-![Fig_2p1_Start_Point](https://user-images.githubusercontent.com/84861735/220183301-3e2a1c3d-8b46-4acb-8483-ff53bfd735d4.png)
-![Fig_2p2_End_Point](https://user-images.githubusercontent.com/84861735/220183302-98274e16-9b12-4e52-b2d0-a55df5b5b28d.png)
+-   STA breaks a design down into timing paths 
+
+-   calculates the signal propagation delay along each path 
+
+-   checks for violations of timing constraints inside the design and at the input/output interface
+
+STA takes the following inputs to perform timing analysis :- 
+
+- Netlist (gate level representation of the design)
+
+- SDC or Constrains file (what you want to time)
+
+- Logic Libraries (information about cells delays mapping to silicon)
+
+### STA Features
+
+1) Static - Does not run dynamic simulation, hence faster & can be run on large capacity design
+2) Exhaustive - Uses mathematical Techniques instead of input vectors , hence timing checks are performed on all possible scenarios
+3) Functionality - Does not verify functionality of the design
+4) Conservative - pessimistic & conservative 
+
+### Timing Paths 
+
+In order to perform the timing analysis , STA breaks the path into small paths at ports & at sequential elements and these paths are known as timing paths.
+
+Following the timing path elements :- 
+
+- **Startpoint** - it is the  point where data is launched by a clock edge or where the data must be available at a specific time.  it can be startpoint must be either an input port or a register clock pin.
+- **Endpoint** - The end of a timing path where data is captured by a clock edge or where the data must be available at a specific time. it can be either a register data input pin or an output port.
+- **Combinational logic network** - Elements that have no memory or internal state. 
+
+Following design shows the different path with their start & end point 
+
+
+
 ![Fig_2p3_Combo_Logic](https://user-images.githubusercontent.com/84861735/220183305-f51887b2-c3b5-4fe4-b2b3-438f996109b1.png)
 ![Fig_3p1_Setup_Check](https://user-images.githubusercontent.com/84861735/220183308-85bf7bf8-f7d4-46aa-a77b-3c61c81b9249.png)
 ![Fig_3p2_Hold_Check](https://user-images.githubusercontent.com/84861735/220183311-acedfb7c-38b6-4264-b465-ae4b414e2117.png)
