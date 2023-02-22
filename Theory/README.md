@@ -155,7 +155,41 @@ Following commands are used to specify boundary constrains
 
 # Day 2
 
+### Other Timing Checks
+Apart from Hold and Setup checks(which happens in data pins with respect to clocks) STA also dose other types of check like 
+- Clock Gating Checks : These types of cells are added to shutoff clock when not required hence helps in saving power . Enable w.r.t clock is checked by STA tool
+- Async Pin Checks : Checks w.r.t reset , set or clear pin w.r.t clocks 
+- Data to Data Checks : STA tools checks skew between them 
+![D2_Fig_1p1](https://user-images.githubusercontent.com/84861735/220701417-73499317-1296-427f-9b2f-56ba5304091d.png)
 
+### Design Rule Checks
+Design Rule Checks specifies about
+1. Slew/Transition Analysis
+![D2_Fig_1p2](https://user-images.githubusercontent.com/84861735/220701478-cf9d959f-6747-4ebc-9e08-852f3c4443f5.png)
+
+2. Load Analysis
+- These are  minimum and maximum capacitance on ports and nets.
+- Also specify the maximum fanout load on ports and output pins.
+    
+3. Clock Skew Analysis
+- It is difference in delay of the clock at different points.
+- It is basically the delay between the launch clock and capture clock.
+- Skew is said to be positive when capture clock has more delay
+![D2_Fig_2p1_pos_skew](https://user-images.githubusercontent.com/84861735/220701484-c9ff1b41-9084-4dbc-a1c3-9edfe23c3965.png)
+- Skew is said to be negative when capture clock has less delay
+![D2_Fig_2p2_neg_skew](https://user-images.githubusercontent.com/84861735/220701487-bd260623-a5e3-42ea-b2fe-8e9b018d6bde.png)
+
+4. Pulse Width Checks
+- As clock travels through the path the clock pulse can change(can happen when rise delay and fall delay are not same) called as Shrinked Clock.
+- If this shrinked clock is below the certain value then pulse width violation happens.
+![D2_Fig_3_PWC](https://user-images.githubusercontent.com/84861735/220701490-9c522a48-1c27-4cb1-bc84-e2eb6cb68bde.png)
+
+
+![D2_Fig_4p1](https://user-images.githubusercontent.com/84861735/220701495-18cff4a7-6375-464a-90ef-f4ecf9c3ed2f.png)
+![D2_Fig_4p2](https://user-images.githubusercontent.com/84861735/220701499-567a538b-e5f3-4c91-bede-3b9721a6f0ce.png)
+![D2_Fig_4p3](https://user-images.githubusercontent.com/84861735/220701502-b38ad761-b104-4de5-8986-40da9c5e0030.png)
+![D2_Fig_5p1](https://user-images.githubusercontent.com/84861735/220701507-6a199f28-9f8f-46dd-b0f0-8549f22b6799.png)
+![D2_Fig_5p2](https://user-images.githubusercontent.com/84861735/220701508-b99282c7-27be-4364-8997-872cf6e2cf84.png)
 
 
 
