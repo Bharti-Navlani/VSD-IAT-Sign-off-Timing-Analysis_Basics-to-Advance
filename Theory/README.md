@@ -4,7 +4,7 @@
     + [Setup & Hold Checks](#Setup-&-Hold-Checks)
     + [Slack Calculation](#Slack-Calculation)
     + [SDC Overview](#SDC-Overview)
-    + [Clock](#Clock)
+    + [Clocks Constraints](#Clock-Constraints)
     + [Port Delays and Boundary Constrains](#Port-Delays-and-Boundary-Constrains)
    
 * [Day 2](#day-2)
@@ -105,22 +105,49 @@ In addition to above , we also need to be consider setup time of the launch flop
 ![Fig_5p3_Slack](https://user-images.githubusercontent.com/84861735/220183328-2bebc7c8-ec63-47f6-9e6a-554b75f4d71a.png)
 
 
-### SDC File
+### SDC Overview 
 
 - Timing constraints are defined in some specific format which is known as , Synopsys Design Constraint (SDC), is used to specify timing and other design constraints
 - SDC commands are the set of commands which are provided as an input to STA Tool to do timing analysis
--  
+- SDC contains set of commands which are listed as below :- 
 
+#### Constraints for Timing
+![SDC1](https://user-images.githubusercontent.com/84861735/220692469-759039de-5f2e-47e7-b999-81819933c151.png)
+#### Constraints for Area and Power
+![SDC2](https://user-images.githubusercontent.com/84861735/220692472-8e14339e-68fd-4353-976c-e4422c052e69.png)
+#### Constraints for Design Rule
+![SDC3](https://user-images.githubusercontent.com/84861735/220692481-dbb7b555-48c2-4b2a-bc97-4eb1fab851b9.png)
+#### Constraints for Interfaces
+![SDC4](https://user-images.githubusercontent.com/84861735/220692446-046fe66c-433a-4161-bc2c-cad47239bb11.png)
+#### Constraints for Modes
+![SDC5](https://user-images.githubusercontent.com/84861735/220692457-6f78afae-c56b-4344-b9f1-e93675a6fc59.png)
+#### Exceptions to Design Constraints
+![SDC6](https://user-images.githubusercontent.com/84861735/220692464-ad640726-ac54-4924-bd9a-08e11405d367.png)
+
+
+### Clocks Constraints 
+
+Clocks constraints can be given in sdc with some addition information like 
 ![Fig_6p1_create_clock](https://user-images.githubusercontent.com/84861735/220183330-e24eb7e6-c00c-4308-9384-0b061b425c5f.png)
 ![Fig_6p2_create_clock](https://user-images.githubusercontent.com/84861735/220183333-711233cf-8c33-449a-847b-79880ba1d6a2.png)
 ![Fig_6p3_create_clock](https://user-images.githubusercontent.com/84861735/220183335-801351a6-edfa-49e5-916b-09461b60df1a.png)
 ![Fig_6p4_create_clock](https://user-images.githubusercontent.com/84861735/220183339-5561ef3e-efb7-40a2-b740-8853e7ad732e.png)
 ![Fig_6p5_create_clock](https://user-images.githubusercontent.com/84861735/220183274-45165aa3-2f9e-48c6-a73e-134ccba7a6fd.png)
+
+**Generated Clocks** are the clocks which are created inside the design which is a divided or multiplied version of parent clock , they can be specified in sdc as shown below :- 
 ![Fig_7p1_gen_clk](https://user-images.githubusercontent.com/84861735/220183278-be428e09-4699-4f70-bc58-b3a8713f49ac.png)
 ![Fig_7p2_gen_clk](https://user-images.githubusercontent.com/84861735/220183282-ef2cedb9-0c92-49f3-98f4-8bea93923f5a.png)
 ![Fig_7p3_gen_clk](https://user-images.githubusercontent.com/84861735/220183285-c4bd03f1-5a6a-42cd-8410-aa0f1e15946f.png)
 ![Fig_7p4_gen_clk](https://user-images.githubusercontent.com/84861735/220183288-fa54d7ea-91ae-459f-9415-2be72cf8c990.png)
 ![Fig_7p5_gen_clk](https://user-images.githubusercontent.com/84861735/220183291-afe8493e-fcd9-48e9-9cfd-ebda60169fdb.png)
-![Fig_8_BC](https://user-images.githubusercontent.com/84861735/220183292-b0b9b195-5764-45d3-b9b6-3323a97652f8.png)
+
+### Port Delays and Boundary Constrains
+
+Following commands are used to specify boundary constrains
+
+    set_input_delay
+    set_output delay
+
+
 ![Fig_8_BC2](https://user-images.githubusercontent.com/84861735/220183293-b6c8c811-ccea-426d-b07e-c99cda9bf33b.png)
 ![Fig_8_BC3](https://user-images.githubusercontent.com/84861735/220183296-7f561f9d-61b1-4618-9783-0e9ea6f8d5a1.png)
