@@ -53,6 +53,10 @@ Reference for commands used in OpenSTA :
 
 https://github.com/Bharti-Navlani/VSD-IAT-Sign-off-Timing-Analysis_Basics-to-Advance/files/10786440/OpenSTA.pdf
 
+In order to get the database for all libs 
+
+    git clone https://github.com/vikkisachdeva/openSTA_sta_workshop
+
 ## Lab_1 : **Inputs to OpenSTA**
 
 Verilog Model : Contains the Standard Cells
