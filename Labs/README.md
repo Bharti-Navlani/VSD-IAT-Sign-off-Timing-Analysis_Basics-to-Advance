@@ -284,19 +284,3 @@ Timing report with min delay on eco design :-
 ![D5_wi_eco_2](https://user-images.githubusercontent.com/84861735/220930425-2acbc8b1-3ea4-4b65-bd0d-58e97c34224c.png)
 
 
-# References
-
-https://github.com/The-OpenROAD-Project/OpenSTA/blob/master/doc/OpenSTA.pdf
-
-https://vlsideepdive.com/
-
-https://vsdiat.com/
-
-# Acknowledgement
-
-Sincere gratitude to Kunal Ghosh{Co-founder of VLSI System Design (VSD) Corp. Pvt. Ltd.} and Vikas Sachdeva {Senior Director, Product Strategy and Business Development at Real Intent} for tremendous effort put to plan & organise the workshop on SIGN-OFF-TIMING-ANALYSIS-using-OpenLane-SKY130 organised by VSD. The workshop was excellent and well designed, this workshop taught me a lot of new things about the design timing analysis using OpenSTA, open source tool. 
-
-
-
-
-
