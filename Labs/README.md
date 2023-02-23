@@ -186,13 +186,31 @@ This will report slack compulation w.r.t 8 path as shown in below image which lo
 
 ## Lab_4 : Clock Gating Check 
 
+Clock gaters are mostly required in the design to shutoff clock for power saving purpose . These can be AND or OR gate based clock gating cells 
+STA tool enable stable w.r.t clock in setup & hold time window 
+
+Following is the input taken to perform the experiment :- 
+
 ![D4_Lab_1p1](https://user-images.githubusercontent.com/84861735/220181744-9c0d1fb0-412d-4810-ae36-46efe07766b0.png)
+
+Following snap shows the run commands & then timing check is being performed :- 
+
 ![D4_Lab_1p2](https://user-images.githubusercontent.com/84861735/220181760-9c86aab7-5269-4b45-b3f1-acd63881bcd5.png)
+
+Following shows the timing report where clockgating check has violation :- 
+
 ![D4_Lab_1p3](https://user-images.githubusercontent.com/84861735/220181780-714596ea-f2c6-434b-82cd-595135db7998.png)
 
 ## Lab 4 : Async Pin Check 
 
+For Async pin , asserting has no relation with the clock but dessertion caused flop to be dependent on clock which can lead to unknow states hence STA tool perform such checks while doing the timing analysis & these are known as recovery & removal timing checks 
+
+Following snap shows the design used to perform async pin check :- 
+
 ![D4_Lab_2p1](https://user-images.githubusercontent.com/84861735/220181803-ae9a6728-1251-4721-b956-bf81fe910100.png)
+
+Following shows the run command & timing report after the timing analysis is done by STA tool :- 
+
 ![D4_Lab_2p2](https://user-images.githubusercontent.com/84861735/220181808-6d30deef-6d5d-42a9-b8d6-14ab597dcea9.png)
 
 # Day5
@@ -255,14 +273,11 @@ Timing report with min delay on original design :-
 
 Timing report with max delay on eco design :- 
 
-![D5_wi_eco_1](https://user-images.githubusercontent.com/84861735/220920439-bc37c119-86c7-46c7-9eff-f4d88a411928.png)
+![D5_wi_eco_1](https://user-images.githubusercontent.com/84861735/220930403-061a3e7e-b03f-4148-b559-91968b9f6e82.png)
 
 Timing report with min delay on eco design :- 
 
-![D5_wi_eco_2](https://user-images.githubusercontent.com/84861735/220920474-2e43f297-343f-449b-bc73-4cba853f852b.png)
-
-
-
+![D5_wi_eco_2](https://user-images.githubusercontent.com/84861735/220930425-2acbc8b1-3ea4-4b65-bd0d-58e97c34224c.png)
 
 
 
