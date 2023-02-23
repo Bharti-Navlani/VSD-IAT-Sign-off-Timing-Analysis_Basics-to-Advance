@@ -454,16 +454,3 @@ If there are two clocks generated at same point then in real silicon only one wi
 
 
 
-
-
-
-# Reference 
-
-https://vsdiat.com/
-
-# Acknowledgement
-
-Kunal Ghosh, Co-founder of VLSI System Design (VSD) Corp. Pvt. Ltd.
-
-Vikas Sachdeva, Advisor, Tech and VLSI Coach, Trainer and Innovator at vlsideepdive.
-
