@@ -34,12 +34,6 @@
 * [Day 5](#day-5)  
     + [Clock Groups](#Clock-Groups)
 
-* [References](#references)
-
-
-* [Acknowledgement](#acknowledgement)
-
-
 
 # Day 1 
 
