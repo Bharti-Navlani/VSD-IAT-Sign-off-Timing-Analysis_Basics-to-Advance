@@ -192,3 +192,18 @@ This will report slack compulation w.r.t 8 path as shown in below image which lo
 ![D4_Lab_2p1](https://user-images.githubusercontent.com/84861735/220181803-ae9a6728-1251-4721-b956-bf81fe910100.png)
 ![D4_Lab_2p2](https://user-images.githubusercontent.com/84861735/220181808-6d30deef-6d5d-42a9-b8d6-14ab597dcea9.png)
 
+# Day5
+
+## Lab_5 : Common Path Pessimism Removal(CPPR) 
+
+Many a time your chip is overdesigned due to undue pessimism in timing calculations. Pessimism in timing analysis makes it difficult for designs to close timing and it is imperative that analysis is not overly pessimistic. There is a clock path related pessimism observed in timing calculated in on-chip-variation mode, and EDA tools have the capability to automatically remove the pessimism while analysis
+
+
+
+
+
+
+
+
+
+
