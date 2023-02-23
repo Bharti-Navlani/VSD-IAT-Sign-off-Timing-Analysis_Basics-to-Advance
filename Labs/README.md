@@ -18,12 +18,15 @@
     + [Lab 3](#Lab-3)
         - [Understanding Slack Compulation](#Understanding-Slack-Compulation)
         
-  * [Day 4](#day-3)
+  * [Day 4](#day-4)
     + [Lab 4](#Lab-4)
         - [Clock Gating Check](#Clock-Gating-Check)
         - [Async Pin Check](#Async-Pin-Check)       
        
-    
+ * [Day 5](#day-5)
+    + [Lab 5](#Lab-5)
+        - [CPPR](#CPPR)
+        - [ECO](#ECO)  
  
  **Content**
 
@@ -223,24 +226,24 @@ Following files shows the timing report when **CPPR is set to 1** , where we hav
 ![D5_Lab_1p6](https://user-images.githubusercontent.com/84861735/220920342-9b7d92e6-fcf7-4adf-a37a-7b021aaa2fc2.png)
 
 
+## Lab_5 : ECO Engineering Change Order
 
-
-
-## Lab_5 : ECO 
-
-ECO –Engineering Change Order
 •In the ECO cycle, we perform various analysis one by one for every check which we need to close but not closed till PnRstage. 
+
 •There are specialized signoff tools that help us to analyze the issue and also suggest the changes we need to do in order to close the issue. 
+
 •The suggested change is captured in an eco file.
+
 •In this lab we will focus on ECO for timing purposes, this is done to fix setup and hold violations
 
 
 Following shows the design used for experiment :- 
 
+![D5_Lab_2p1](https://user-images.githubusercontent.com/84861735/220926295-eb2bf449-2e38-4916-b2b1-94ce4e8c61d5.png)
 
 Following is the command files which shows timing check performed at the input design & performing the eco then checking the timing on eco design :- 
 
-
+![D5_Lab_2p2](https://user-images.githubusercontent.com/84861735/220926308-7cf3d5f2-b3c2-4348-ad2a-11537c462f93.png)
 
 Timing report with max delay on original design :- 
 
