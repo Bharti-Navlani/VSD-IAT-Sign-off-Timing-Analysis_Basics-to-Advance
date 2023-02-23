@@ -199,6 +199,66 @@ This will report slack compulation w.r.t 8 path as shown in below image which lo
 Many a time your chip is overdesigned due to undue pessimism in timing calculations. Pessimism in timing analysis makes it difficult for designs to close timing and it is imperative that analysis is not overly pessimistic. There is a clock path related pessimism observed in timing calculated in on-chip-variation mode, and EDA tools have the capability to automatically remove the pessimism while analysis
 
 
+Following the verilog code & schematic of the design used for analysis for CPPR :- 
+
+![D5_Lab_1p2](https://user-images.githubusercontent.com/84861735/220920260-dbb69f3a-88ef-4983-a07b-22a577197bc8.png)
+
+![D5_Lab_1p1](https://user-images.githubusercontent.com/84861735/220920247-dba1518e-4387-4408-9b9a-ec7985e6fa71.png)
+
+Following files shows the run commands where **CPPR is set to 0** :- 
+
+![D5_Lab_1p3](https://user-images.githubusercontent.com/84861735/220920271-3a27a53e-1f61-49f0-96a9-474d06b03f67.png)
+
+Following files shows the timing report when **CPPR is set to 0** :- 
+
+![D5_Lab_1p4](https://user-images.githubusercontent.com/84861735/220920295-51619313-8351-47e2-aee2-a70ebff68157.png)
+
+
+Following files shows the run commands where **CPPR is set to 1** :-
+
+![D5_Lab_1p5](https://user-images.githubusercontent.com/84861735/220920314-789ebd80-2f23-4c6a-bffd-d5b83a07fdba.png)
+
+Following files shows the timing report when **CPPR is set to 1** , where we have better timing results :- 
+
+![D5_Lab_1p6](https://user-images.githubusercontent.com/84861735/220920342-9b7d92e6-fcf7-4adf-a37a-7b021aaa2fc2.png)
+
+
+
+
+
+## Lab_5 : ECO 
+
+ECO –Engineering Change Order
+•In the ECO cycle, we perform various analysis one by one for every check which we need to close but not closed till PnRstage. 
+•There are specialized signoff tools that help us to analyze the issue and also suggest the changes we need to do in order to close the issue. 
+•The suggested change is captured in an eco file.
+•In this lab we will focus on ECO for timing purposes, this is done to fix setup and hold violations
+
+
+Following shows the design used for experiment :- 
+
+
+Following is the command files which shows timing check performed at the input design & performing the eco then checking the timing on eco design :- 
+
+
+
+Timing report with max delay on original design :- 
+
+![D5_wo_eco_1](https://user-images.githubusercontent.com/84861735/220920509-4dfc3744-0844-4af9-b177-1f03c36dc426.png)
+
+Timing report with min delay on original design :- 
+
+![D5_wo_eco_2](https://user-images.githubusercontent.com/84861735/220920518-cdf5929a-9284-4b6f-88a7-50a0602a1963.png)
+
+Timing report with max delay on eco design :- 
+
+![D5_wi_eco_1](https://user-images.githubusercontent.com/84861735/220920439-bc37c119-86c7-46c7-9eff-f4d88a411928.png)
+
+Timing report with min delay on eco design :- 
+
+![D5_wi_eco_2](https://user-images.githubusercontent.com/84861735/220920474-2e43f297-343f-449b-bc73-4cba853f852b.png)
+
+
 
 
 
