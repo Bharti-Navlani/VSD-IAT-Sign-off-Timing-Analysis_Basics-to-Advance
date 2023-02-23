@@ -12,28 +12,31 @@
     + [Design Rule Checks](#Design-Rule-Checks)
     + [Latch Timing](#Latch-Timing)
     + [STA Text Report](#STA-Text-Report)
-   
+
 * [Day 3](#day-3)
-    + Multiple Clocks(#multiple-clocks)
-    + Types of Arch(#Types-of-Arch)
-    + Cell Delays(#Cell-Delays)
-    + Clock Skew(#Clock-Skew)
-    + Clock Latency(#Clock-Latency)
-    + Clock Jitter(#Clock-Jitter)
-    + Setup Check(#Setup-Check)
-    + Hold Check(#Hold-Check)
-    + CRPR Clock Reconvergence Pessimism Removal(#CRPR-Clock-Reconvergence-Pessimism-Removal)
+    + [Multiple Clocks](#Multiple-Clocks)
+    + [Types of Arch](#Types-of-Arch)
+    + [Cell Delays](#Cell-Delays)
+    + [Clock Skew](#Clock-Skew)
+    + [Clock Latency](#Clock-Latency)
+    + [Clock Jitter](#Clock-Jitter)
+    + [Setup Check](#Setup-Check)
+    + [Hold Check](#Hold-Check)
+    + [CRPR-Clock Reconvergence Pessimism Removal](#CRPR-Clock-Reconvergence-Pessimism-Removal)
     
-
 * [Day 4](#day-4)
-    + Crosstalk and Noise(#Crosstalk-and-Noise)
-    + Process Variation(#Process-Variation)
-    + Clock Gating Checks(#Clock-Gating-Checks)
-    + Checks on Async Pins(#Checks-on-Async-Pins)
-
-
+    + [Crosstalk and Noise](#Crosstalk-and-Noise)
+    + [Process Variation](#Process-Variation)
+    + [Clock Gating Checks](#Clock-Gating-Checks)
+    + [Checks on Async Pins](#Checks-on-Async-Pins)
+    
+   
+* [Day 5](#day-5)  
+    + [Clock Groups](#Clock-Groups)
 
 * [References](#references)
+
+
 * [Acknowledgement](#acknowledgement)
 
 
@@ -340,12 +343,14 @@ Clock jitter is a characteristic of the clock source and the clock signal enviro
 ### Crosstalk and Noise
 Crosstalk is any phenomenon in electronics that occurs when a signal carried on one circuit or channel of a transmission system causes an undesirable effect in another circuit or channel
 
+![D4_Fig_1p1](https://user-images.githubusercontent.com/84861735/220728296-09dc5ac1-15a8-40c5-b9b7-83fcb5d5c0b6.png)
+-bd133c0e1d07.png)
+
 -In this when both aggressor is changing from 0 to 1 and victim is also changing in the same direction so it can couse the victim signal to change faster, hence rise time changes and delay decreses
 -If the aggressor and victim are changing in opposite direction then because of coupling caps aggressor will try to push the victim signal in same direction, hence chage becomes slower in victim which in increases delay
 -STA take this changes into consideration and accordingly calculate setup and hold time
 
-
-
+![D4_Fig_1p2](https://user-images.githubusercontent.com/84861735/220728324-86723ba9-4dc3-42c0-8939-21f4680c599a.png)
 
 When aggressor is changing whereas victim signal in not changing so we can have glich in the victim signal which could lead to functional failure. So STA need to make sure these glitches are not present or should be below a threshold value.
 
@@ -353,7 +358,7 @@ When aggressor is changing whereas victim signal in not changing so we can have 
 
 Sometimes we have process variation(can have differnt delay or transition time)within a chip or from wafer to wafer or within the wafer. So STA need to take this into account.
 
-
+![D4_Fig_2p1](https://user-images.githubusercontent.com/84861735/220728347-403e1c3d-d09e-4907-981b-ff5458eabc4d.png)
 
 ### Clock Gating Checks
 A clock gating check occurs when a gating signal can control the path of a clock signal at a logic cell. For example when a clock and enable signal is fedded as input to an AND gate.
@@ -361,10 +366,9 @@ The signal must be used as clock downstream, like feed a flop or latch clock pin
 Intention of this check is that transition on gating pin does not Create unnecessary active edge of the clock in the fanout.
 
 
-
+![D4_Fig_2p2](https://user-images.githubusercontent.com/84861735/220728385-175301ee-1c9c-499d-9420-aa0459c3d83d.png)
 
 So in case of AND and NAND gates clock gating checks that during setup check the enable should become stable sometime before the clock rising edge(so that coack has enough setup time) and during hold check the enable should become stable sometime after the clock rising edge
-
 
 
 So in case of OR or NOR gates clock gating checks that before some time and after some time of the low value of the clock enable pin should be stable.
@@ -382,11 +386,9 @@ De-assertion means clear is off and output is dependent on input and clock.
 
 
 
-![D4_Fig_1p1](https://user-images.githubusercontent.com/84861735/220728296-09dc5ac1-15a8-40c5-b9b7-83fcb5d5c0b6.png)
--bd133c0e1d07.png)
-![D4_Fig_1p2](https://user-images.githubusercontent.com/84861735/220728324-86723ba9-4dc3-42c0-8939-21f4680c599a.png)
-![D4_Fig_2p1](https://user-images.githubusercontent.com/84861735/220728347-403e1c3d-d09e-4907-981b-ff5458eabc4d.png)
-![D4_Fig_2p2](https://user-images.githubusercontent.com/84861735/220728385-175301ee-1c9c-499d-9420-aa0459c3d83d.png)
+
+
+
 ![D4_Fig_3p1](https://user-images.githubusercontent.com/84861735/220728429-d9dfe000-4147-476f-9e38-c423cbde4f2c.png)
 ![D4_Fig_3p2](https://user-images.githubusercontent.com/84861735/220728455-6d6bedef-6b68-4a9a-b633-fad023cab9eb.png)
 ![D4_Fig_3p3](https://user-images.githubusercontent.com/84861735/220728474-8c239c3b-c1cb-49d4-a9f7-75b53c7223a8.png)
