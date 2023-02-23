@@ -404,6 +404,17 @@ Removal check - assert & dessert should happen some time after the rising edge o
 ![D4_Fig_4p3](https://user-images.githubusercontent.com/84861735/220728537-5117e8ca-0c93-44b1-aa63-3cf175209cb1.png)
 
 
+# Day 5 
+
+
+### Clock Groups 
+
+In order to tell the STA tool on which path timing analysis should be performed & which path it should not can be given by used with various sets of commands
+
+- Then Logically Exclusive Clock means clocks can exist together just the selection is different where as Physically Exclusive Clock cannot be present together.
+- Physically Exclusive Clock do not have any crosstalk beacuse only one cloack is present at a time whereas Logically Exclusive Clock well have crosstalk
+
+
 
 
 # Reference 
