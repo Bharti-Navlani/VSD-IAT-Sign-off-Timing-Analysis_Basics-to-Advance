@@ -411,8 +411,54 @@ Removal check - assert & dessert should happen some time after the rising edge o
 
 In order to tell the STA tool on which path timing analysis should be performed & which path it should not can be given by used with various sets of commands
 
-- Then Logically Exclusive Clock means clocks can exist together just the selection is different where as Physically Exclusive Clock cannot be present together.
-- Physically Exclusive Clock do not have any crosstalk beacuse only one cloack is present at a time whereas Logically Exclusive Clock well have crosstalk
+#### Syncronous Clock 
+
+![D5_Fig_1p1](https://user-images.githubusercontent.com/84861735/220945175-2b68daa1-2072-4594-b6c5-bf6d7b2ff10a.png)
+
+#### Asyncronous Clock 
+
+![D5_Fig_1p2](https://user-images.githubusercontent.com/84861735/220945183-ad65eecf-d923-43a2-9755-9e2c0ac761d6.png)
+
+#### Logically Exclusive Clocks 
+
+Then Logically Exclusive Clock means clocks can exist together based the selection line clock will go into the design so these are logically exclusive. These can have crosstalk 
+
+![D5_Fig_1p3](https://user-images.githubusercontent.com/84861735/220945191-ca97544f-4038-4f94-b5ce-17a00200e723.png)
+
+#### Physically Exclusive Clocks 
+
+If there are two clocks generated at same point then in real silicon only one will be present so they are Physically Exclusive Clock. There is no possibility of cross talk between them 
+
+![D5_Fig_1p4](https://user-images.githubusercontent.com/84861735/220945462-db293a0c-3fb6-4856-be95-75f45f03dd18.png)
+
+#### set_clock_groups 
+
+![D5_Fig_1p5](https://user-images.githubusercontent.com/84861735/220945475-c64db9e5-acb4-4e22-99f4-9be668c6e99e.png)
+
+![D5_Fig_1p6](https://user-images.githubusercontent.com/84861735/220945244-0af5860d-1a56-43b8-ae45-bb2f838f5397.png)
+
+![D5_Fig_3p1](https://user-images.githubusercontent.com/84861735/220945274-b847d894-d5af-4090-bbd7-0cf4a2af480d.png)
+
+#### Path Specification 
+
+    -from F1/Ck - it will be applied to all the paths from here
+    -to F5/D
+    -through U1/A U1/Z
+    -through U1/Z U1/A - this is invalid 
+
+![D5_Fig_3p2](https://user-images.githubusercontent.com/84861735/220945294-f5cf90a3-77a2-4580-8b61-40fc88d42ac5.png)
+
+#### set_multicycle_path
+
+![D5_Fig_3p3](https://user-images.githubusercontent.com/84861735/220945312-8dc5ad3a-1740-4831-baff-a6fc1872a0aa.png)
+
+![D5_Fig_3p4](https://user-images.githubusercontent.com/84861735/220945352-c530e015-9e49-4b81-a424-2e6c5d76cceb.png)
+
+#### other exceptions
+
+![D5_Fig_3p5](https://user-images.githubusercontent.com/84861735/220945372-e5fa3c32-fb28-4ea4-b38b-0bf1291d4512.png)
+
+
 
 
 
